@@ -1,0 +1,32 @@
+<main>
+    <section>
+        <article class="article-detail">
+        <h2> <%= post.Title %> </h2>
+        <p> <%= post.Contents %> </p>
+        <p> par :<%=post.FirstName+" "+post.LastName  %> </p>
+        <hr/>
+    </article>
+
+    <% comments.forEach(element => { %>
+        <article class ="comment-article">
+            <div>
+                <h3> <%= element.NickName %>  </h3>
+                <p> <%= element.Contents %>  </p>
+                <p class="date-comment"> <%= element.CreationTimestamp.toLocaleDateString() %> </p>
+            </div>
+        </article>
+        <div class="divider"></div>
+    <% }) %>
+    </section>
+
+<hr /> 
+
+<form action="/form/<%= post.Id %> " method="post">
+    <label for="">Alias</label>
+    <input type="text" name="alias">
+    <label for="">Message : </label>
+    <input type="text" size="50" style ="height: 150px" name="message" />
+
+    <input type="submit" value="Envoyer">
+</form>
+</main>

@@ -1,0 +1,12 @@
+<main>
+    <section class="home-list">
+            <% posts.forEach(element => { %>
+                <article>
+                    <a href="/comment/<%=element.Id %> "> <%= element.Title %>  </a>
+                    <p> <%= element.Contents.substring(0, 30)+"..." %>  </p>
+                    <p> <%= element.Firstname+" "+element.LastName %> </p>
+                    <p> <%= element.CreationTimestamp.toLocaleDateString() %>  </p>
+                </article>
+            <% }) %>
+    </section>
+</main>

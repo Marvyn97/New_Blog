@@ -1,0 +1,30 @@
+
+
+    <section id="admin-panel">
+        <h2>Admin</h2>
+        <a href="/add_post">Ajouter un article</a>
+        
+        <table class="standard-table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>article</th>
+                <th>Auteur</th>
+                <th>Catégorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(element => { %>
+             <tr>
+                 <td> <%= element.Title %>  </td>
+                 <td> <%= element.Contents.substring(0, 30)+"..." %>  </td>
+                 <td> <%= element.FirstName+" "+element.LastName %>  </td>
+                 <td> <%= element.Name %>  </td>
+                 <td><a href="edit_post/<%= element.Id %>">edit</a></td>
+
+                 <td><a href="delete_post/<%= element.Id %>">delete</a></td>
+             </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</section>

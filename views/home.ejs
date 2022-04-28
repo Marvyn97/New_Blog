@@ -1,0 +1,15 @@
+<main>
+    <section class="home-list">
+        <h2>Bienvennue sur mon blog</h2>
+
+        <% if (!session.isLogged) { %>
+            <p>Vous n'êtes pas connecté</p>
+           <% } else { %>
+               <p>Bienvennue <%= session.user.firstname %></p>
+           <% } %>
+           
+    </section>
+</main>
+
+ 
+ 

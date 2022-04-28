@@ -1,0 +1,21 @@
+<section>
+    <form action="/register" method="post" class="login">
+        <label for="">Email</label>
+        <input type="email" name="email">
+
+        <label for="">firstName</label>
+        <input type="text" name="firstName">
+
+        <label for="">LastName</label>
+        <input type="text" name="lastName">
+        
+        <label for="">Mot de passe</label>
+        <input type="text" name="password" />
+    
+        <input type="submit" value="s'enregistrer">
+    </form>
+
+    <% if (error !== null) { %>
+        <p><%= error %> </p>
+    <% } %>
+</section>

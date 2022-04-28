@@ -1,0 +1,14 @@
+<section>
+    <form action="/login" method="post" class="login">
+        <label for="">Email</label>
+        <input type="email" name="email">
+        <label for="">Mot de passe</label>
+        <input type="text" name="password" />
+    
+        <input type="submit" value="Connection">
+    </form>
+
+    <% if (error !== null) { %>
+        <p><%= error %> </p>
+    <% } %>
+</section>
